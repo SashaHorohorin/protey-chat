@@ -1,0 +1,4 @@
+/node_modules
+
+/packages/app/messenger/build
+/packages/unit/chat/build
