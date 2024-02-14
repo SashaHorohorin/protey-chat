@@ -38,6 +38,7 @@ export default class StoreAuth {
             const {data} = await AuthService.postLogin(obj);
             localStorage.setItem("token", data.token);
             localStorage.setItem("username", data.username);
+            localStorage.setItem("id", `${data.id}`);
 
             this.setAuth(true);
             this.setUser(data.username);
