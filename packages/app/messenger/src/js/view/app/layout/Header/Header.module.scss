@@ -1,0 +1,28 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  color: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  -webkit-text-stroke: 1.5px #000000;
+}
+.link{
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px 12px;
+  background: #587099;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  &:last-child{
+    margin: 0;
+  }
+}
+.active{
+  background: #3F5677;
+}

@@ -1,0 +1,17 @@
+.input{
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  outline: none;
+  background: #8589AC;
+  margin-bottom: 13px;
+  color: white;
+  &:last-child{
+    margin-bottom: 30px;
+  }
+  &::placeholder{
+    color: white;
+    opacity: 0.5;
+  }
+}
