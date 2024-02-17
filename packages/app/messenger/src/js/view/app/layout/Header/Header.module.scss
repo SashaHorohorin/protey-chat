@@ -19,10 +19,111 @@
   text-decoration: none;
   border-radius: 20px;
   border: none;
+  transition: all 0.5s ease;
   &:last-child{
     margin: 0;
   }
 }
 .active{
   background: #3F5677;
+}
+
+.btnCreateWrapper{
+  position: relative;
+}
+.wrapperBtnsChat{
+  display: flex;
+  align-items: center;
+}
+
+.activeBtnCreate{
+  background: #3F5677;
+  border-radius: 20px 20px 0 0;
+}
+
+.create{
+  opacity: 0;
+  position: absolute;
+  top: 32px;
+  left: -133px;
+  width: 250px;
+  color: white;
+  background: #3F5677;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+  transition: opacity 0.5s ease;
+  &__header{
+    display: flex;
+    align-items: center;
+  }
+  &.activeCreate{
+    opacity: 1;
+  }
+
+}
+.header{
+  margin-bottom: 20px;
+  &__name{
+    cursor: pointer;
+    font-size: 11px;
+    margin-right: 10px;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  &__toggle{
+    cursor: pointer;
+    position: relative;
+    width: 42px;
+    height: 18px;
+    background: #8589AC;
+    border-radius: 20px;
+    margin-right: 10px;
+
+    & span{
+      background: #3F5677;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: all 0.5s ease-in-out;
+      &.activeToggle{
+        left: 26px;
+      }
+    }
+  }
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__input{
+    outline: none;
+    color: white;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 5px 10px;
+    background: #8589AC;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 12px;
+    &::placeholder{
+      color: white;
+      opacity: 0.5;
+    }
+  }
+  &__btn{
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 11px;
+    background: #587099;
+    padding: 5px 20px;
+  }
 }

@@ -1,7 +1,5 @@
 import {createRoot} from "react-dom/client";
-
-import StoreAuth from "@/js/store/sroreAuth/storeAuth";
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import { RouterProvider} from "react-router-dom"
 import {routers} from "@/js/view/app/routers/routers";
 
 
@@ -12,8 +10,6 @@ if(!root){
     throw new Error('root not found')
 }
 
-
-export const storeAuth = new StoreAuth()
 
 const container = createRoot(root);
 

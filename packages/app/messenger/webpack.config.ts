@@ -34,11 +34,11 @@ export default (env: EnvVariables) => {
 
     config.plugins.push(new webpack.container.ModuleFederationPlugin({
         name: 'messenger',
-        filename: "remoteEntry.js",
         remotes: {
             chat: `chat@${CHAT_REMOTE_URL}/remoteEntry.js`
         },
         shared: {
+            mobx: { singleton: true },
             ...packageJson.dependencies,
             react: {
                 eager: true,

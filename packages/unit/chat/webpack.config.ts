@@ -34,8 +34,10 @@ export default (env: EnvVariables) => {
         filename: "remoteEntry.js",
         exposes: {
             './view' : './src/js/view/Application.tsx',
+            './store' : './src/js/store/storeChat.ts',
         },
         shared: {
+            mobx: { singleton: true },
             ...packageJson.dependencies,
             react: {
                 eager: true,

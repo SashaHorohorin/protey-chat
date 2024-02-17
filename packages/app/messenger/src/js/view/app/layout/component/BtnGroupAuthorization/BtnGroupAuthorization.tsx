@@ -3,10 +3,10 @@ import {Link} from "react-router-dom";
 import cn from "classnames";
 import styles from "@/js/view/app/layout/Header/Header.module.scss";
 import {AuthURL} from "@/js/constants";
-import {storeAuth} from "@/bootstrap";
 import {
     BtnGroupAuthorizationProps
 } from "@/js/view/app/layout/component/BtnGroupAuthorization/BtnGroupAuthorization.props";
+import {storeAuth} from "@/js/store/sroreAuth/storeAuth";
 
 const BtnGroupAuthorization = ({sign}: BtnGroupAuthorizationProps):JSX.Element => {
     const nextLink = () => {

@@ -5,8 +5,8 @@ import CustomInput from "@/js/view/app/components/CustomInput/CustomInput";
 import {useNavigate, useParams} from "react-router-dom";
 import {AuthURL} from "@/js/constants";
 import {observer} from "mobx-react-lite";
-import {storeAuth} from "@/bootstrap";
 import cn from 'classnames';
+import {storeAuth} from "@/js/store/sroreAuth/storeAuth";
 
 const AuthorizationForm = observer(({title, nameButton}: AuthorizationFormProps): JSX.Element => {
     const {sign} = useParams();

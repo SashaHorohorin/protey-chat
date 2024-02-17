@@ -1,8 +1,9 @@
 import {makeAutoObservable} from 'mobx'
 import {IObjLogin, IObjRegistration, ISendObj} from "@/js/store/sroreAuth/types/sroreAuthTypes";
-import AuthService from "@/js/service/AuthService";
+import AuthService from "../../service/AuthService";
 
-export default class StoreAuth {
+
+class StoreAuth {
     objValInputs: ISendObj = {
         username: '',
         password: '',
@@ -18,6 +19,7 @@ export default class StoreAuth {
     setAuth(bool: Boolean) {
         this.isAuth = bool;
     }
+
     constructor() {
         makeAutoObservable(this)
     }
@@ -56,7 +58,7 @@ export default class StoreAuth {
             console.log(error?.message);
         }
     }
-
-
 }
 
+
+export const storeAuth = new StoreAuth();
